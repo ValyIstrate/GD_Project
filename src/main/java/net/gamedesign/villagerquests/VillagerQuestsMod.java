@@ -1,6 +1,8 @@
 package net.gamedesign.villagerquests;
 
 import com.mojang.logging.LogUtils;
+import net.gamedesign.villagerquests.block.ModBlocks;
+import net.gamedesign.villagerquests.item.ModItems;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -17,6 +19,10 @@ public class VillagerQuestsMod {
 
     public VillagerQuestsMod() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        ModItems.register(modEventBus);
+
+        ModBlocks.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
