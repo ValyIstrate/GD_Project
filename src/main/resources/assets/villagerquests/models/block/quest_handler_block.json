@@ -7,6 +7,6 @@
     "east": "villagerquests:block/quest_handler_block_default",
     "south": "villagerquests:block/quest_handler_block_default",
     "west": "villagerquests:block/quest_handler_block_default",
-    "particles": "villagerquests:block/quest_handler_block_default"
+    "particle": "villagerquests:block/quest_handler_block_default"
   }
 }

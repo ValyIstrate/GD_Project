@@ -20,7 +20,7 @@ public class ModBlocks {
             DeferredRegister.create(ForgeRegistries.BLOCKS, VillagerQuestsMod.MOD_ID);
 
     public static final RegistryObject<Block> QUEST_HANDLER = registerBlock("quest_handler_block",
-            () -> new Block(BlockBehaviour.Properties.of(Material.WOOD).strength(6f)), CreativeModeTab.TAB_MISC);
+            () -> new Block(BlockBehaviour.Properties.of(Material.WOOD).strength(1f)), CreativeModeTab.TAB_MISC);
 
     public static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
