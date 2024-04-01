@@ -2,7 +2,11 @@ package net.gamedesign.villagerquests;
 
 import com.mojang.logging.LogUtils;
 import net.gamedesign.villagerquests.block.ModBlocks;
+import net.gamedesign.villagerquests.block.entity.ModBlockEntities;
 import net.gamedesign.villagerquests.item.ModItems;
+import net.gamedesign.villagerquests.screen.ModMenuTypes;
+import net.gamedesign.villagerquests.screen.QuestStoneScreen;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -24,6 +28,9 @@ public class VillagerQuestsMod {
 
         ModBlocks.register(modEventBus);
 
+        ModBlockEntities.register(modEventBus);
+        ModMenuTypes.register(modEventBus);
+
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
@@ -37,7 +44,7 @@ public class VillagerQuestsMod {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-
+            MenuScreens.register(ModMenuTypes.QUEST_STONE_MENU.get(), QuestStoneScreen::new);
         }
     }
 }
