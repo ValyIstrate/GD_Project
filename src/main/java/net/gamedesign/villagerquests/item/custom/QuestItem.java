@@ -15,8 +15,11 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 
 public class QuestItem extends Item {
-    public QuestItem(Properties properties) {
+    private String recipe;
+
+    public QuestItem(Properties properties, String recipe) {
         super(properties);
+        this.recipe = recipe;
     }
 
     @Override
@@ -32,7 +35,7 @@ public class QuestItem extends Item {
     }
 
     private void outputMessage(Player player) {
-        player.sendSystemMessage(Component.literal("Interacted with a quest!"));
+        player.sendSystemMessage(Component.literal(this.recipe));
     }
 
     @Override

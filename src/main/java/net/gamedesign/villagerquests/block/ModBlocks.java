@@ -2,6 +2,7 @@ package net.gamedesign.villagerquests.block;
 
 import net.gamedesign.villagerquests.VillagerQuestsMod;
 import net.gamedesign.villagerquests.item.ModItems;
+import net.gamedesign.villagerquests.modetab.ModCreativeModeTab;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
@@ -20,7 +21,7 @@ public class ModBlocks {
             DeferredRegister.create(ForgeRegistries.BLOCKS, VillagerQuestsMod.MOD_ID);
 
     public static final RegistryObject<Block> QUEST_HANDLER = registerBlock("quest_handler_block",
-            () -> new Block(BlockBehaviour.Properties.of(Material.WOOD).strength(1f)), CreativeModeTab.TAB_MISC);
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(1f)), ModCreativeModeTab.TEST_TAB);
 
     public static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

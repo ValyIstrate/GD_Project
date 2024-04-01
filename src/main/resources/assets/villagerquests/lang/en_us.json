@@ -1,5 +1,7 @@
 {
   "item.villagerquests.quest": "Quest",
 
-  "block.villagerquests.quest_handler_block": "Quest Handler"
+  "block.villagerquests.quest_handler_block": "QuestStone",
+
+  "itemGroup.queststab": "Villager's Quests"
 }
