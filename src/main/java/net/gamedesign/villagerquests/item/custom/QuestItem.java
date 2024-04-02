@@ -8,6 +8,7 @@ import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.Nullable;
@@ -15,11 +16,22 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 
 public class QuestItem extends Item {
-    private String recipe;
+    private final String recipe;
+    private final Item requiredItem;
+    private final int requiredQuantity;
+    private final Item reward;
+    private final int rewardQuantity;
 
-    public QuestItem(Properties properties, String recipe) {
+    public QuestItem(Properties properties, String recipe,
+                     Item requiredItem, int requiredQuantity,
+                     Item reward, int rewardQuantity) {
         super(properties);
+
         this.recipe = recipe;
+        this.requiredItem = requiredItem;
+        this.requiredQuantity = requiredQuantity;
+        this.reward = reward;
+        this.rewardQuantity = rewardQuantity;
     }
 
     @Override
@@ -36,6 +48,26 @@ public class QuestItem extends Item {
 
     private void outputMessage(Player player) {
         player.sendSystemMessage(Component.literal(this.recipe));
+    }
+
+    public String getRecipe() {
+        return this.recipe;
+    }
+
+    public Item getRequiredItem() {
+        return requiredItem;
+    }
+
+    public int getRequiredQuantity() {
+        return requiredQuantity;
+    }
+
+    public Item getReward() {
+        return reward;
+    }
+
+    public int getRewardQuantity() {
+        return rewardQuantity;
     }
 
     @Override

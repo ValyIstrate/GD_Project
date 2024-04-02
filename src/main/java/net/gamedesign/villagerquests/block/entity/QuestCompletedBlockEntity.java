@@ -1,5 +1,7 @@
 package net.gamedesign.villagerquests.block.entity;
 
+import net.gamedesign.villagerquests.item.ModItems;
+import net.gamedesign.villagerquests.item.custom.QuestItem;
 import net.gamedesign.villagerquests.screen.QuestStoneMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -147,9 +149,12 @@ public class QuestCompletedBlockEntity extends BlockEntity implements MenuProvid
 
     private static void craftItem(QuestCompletedBlockEntity pEntity) {
         if(hasRecipe(pEntity)) {
-            pEntity.itemHandler.extractItem(1, 1, false);
-            pEntity.itemHandler.setStackInSlot(2, new ItemStack(Items.DIAMOND,
-                    pEntity.itemHandler.getStackInSlot(2).getCount() + 1));
+            QuestItem questItem = (QuestItem) pEntity.itemHandler.getStackInSlot(0).getItem();
+
+            pEntity.itemHandler.extractItem(0, 1, false);
+            pEntity.itemHandler.extractItem(1, questItem.getRequiredQuantity(), false);
+            pEntity.itemHandler.setStackInSlot(2, new ItemStack(questItem.getReward(),
+                    questItem.getRewardQuantity()));
 
             pEntity.resetProgress();
         }
@@ -161,10 +166,17 @@ public class QuestCompletedBlockEntity extends BlockEntity implements MenuProvid
             inventory.setItem(i, entity.itemHandler.getStackInSlot(i));
         }
 
-        boolean hasQuestItems = entity.itemHandler.getStackInSlot(1).getItem() == Items.DIAMOND;
+        if(!entity.itemHandler.getStackInSlot(0).getItem().getClass().equals(QuestItem.class))
+            return false;
+
+        QuestItem questItem = (QuestItem) entity.itemHandler.getStackInSlot(0).getItem();
+
+        boolean hasQuestItems = entity.itemHandler.getStackInSlot(1).getItem() == questItem.getRequiredItem() &&
+                entity.itemHandler.getStackInSlot(1).getCount() == questItem.getRequiredQuantity();
 
         return hasQuestItems && canInsertAmountIntoOutputSlot(inventory) &&
-                canInsertItemIntoOutputSlot(inventory, new ItemStack(Items.DIAMOND, 1));
+                canInsertItemIntoOutputSlot(inventory, new ItemStack(questItem.getReward(),
+                        questItem.getRewardQuantity()));
     }
 
     private static boolean canInsertItemIntoOutputSlot(SimpleContainer inventory, ItemStack itemStack) {

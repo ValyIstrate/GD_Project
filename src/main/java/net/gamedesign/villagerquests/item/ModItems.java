@@ -4,6 +4,7 @@ import net.gamedesign.villagerquests.VillagerQuestsMod;
 import net.gamedesign.villagerquests.item.custom.QuestItem;
 import net.gamedesign.villagerquests.modetab.ModCreativeModeTab;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -15,7 +16,8 @@ public class ModItems {
 
     public static final RegistryObject<QuestItem> QUEST_TEST_1 = ITEMS.register("quest",
             () -> new QuestItem(new Item.Properties().tab(ModCreativeModeTab.TEST_TAB).stacksTo(1),
-                    "Retrieve 5 emeralds and you will get 1 diamond!"));
+                    "Retrieve 5 emeralds and you will get 1 diamond!",
+                    Items.EMERALD, 5, Items.DIAMOND, 1));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
