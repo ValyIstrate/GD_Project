@@ -6,6 +6,7 @@ import net.gamedesign.villagerquests.block.entity.ModBlockEntities;
 import net.gamedesign.villagerquests.item.ModItems;
 import net.gamedesign.villagerquests.screen.ModMenuTypes;
 import net.gamedesign.villagerquests.screen.QuestStoneScreen;
+import net.gamedesign.villagerquests.villager.ModVillagers;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -25,8 +26,9 @@ public class VillagerQuestsMod {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModItems.register(modEventBus);
-
         ModBlocks.register(modEventBus);
+
+        ModVillagers.register(modEventBus);
 
         ModBlockEntities.register(modEventBus);
         ModMenuTypes.register(modEventBus);
@@ -37,7 +39,9 @@ public class VillagerQuestsMod {
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
-
+        event.enqueueWork(() -> {
+            ModVillagers.registerPOIs();
+        });
     }
 
     @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)

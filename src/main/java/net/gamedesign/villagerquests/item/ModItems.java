@@ -14,7 +14,8 @@ public class ModItems {
             DeferredRegister.create(ForgeRegistries.ITEMS, VillagerQuestsMod.MOD_ID);
 
     public static final RegistryObject<QuestItem> QUEST_TEST_1 = ITEMS.register("quest",
-            () -> new QuestItem(new Item.Properties().tab(ModCreativeModeTab.TEST_TAB).stacksTo(1), "Quest test"));
+            () -> new QuestItem(new Item.Properties().tab(ModCreativeModeTab.TEST_TAB).stacksTo(1),
+                    "Retrieve 5 emeralds and you will get 1 diamond!"));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
