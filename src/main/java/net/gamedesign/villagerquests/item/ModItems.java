@@ -1,16 +1,10 @@
 package net.gamedesign.villagerquests.item;
 
-import com.google.common.collect.ImmutableMap;
-import com.google.common.collect.Maps;
 import net.gamedesign.villagerquests.VillagerQuestsMod;
 import net.gamedesign.villagerquests.item.custom.QuestItem;
 import net.gamedesign.villagerquests.item.utils.BookEnchantmentHelper;
 import net.gamedesign.villagerquests.modetab.ModCreativeModeTab;
 import net.minecraft.world.item.*;
-import net.minecraft.world.item.enchantment.EnchantmentHelper;
-import net.minecraft.world.item.enchantment.Enchantments;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraftforge.common.Tags;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -22,10 +16,26 @@ public class ModItems {
 
     public static final RegistryObject<QuestItem> QUEST_WIZARD_ONE = ITEMS.register("quest_wizard_one",
             () -> new QuestItem(new Item.Properties().tab(ModCreativeModeTab.TEST_TAB).stacksTo(1),
+                    "Retrieve a stack of leather and you will get a Mending Enchantment Book!",
+                    Items.LEATHER,
+                    64,
+                    BookEnchantmentHelper.createMendingBook().getItem(),
+                    1));
+
+    public static final RegistryObject<QuestItem> QUEST_WIZARD_TWO = ITEMS.register("quest_wizard_two",
+            () -> new QuestItem(new Item.Properties().tab(ModCreativeModeTab.TEST_TAB).stacksTo(1),
                     "Retrieve a stack of gold ingots and you will get a Fortune III Enchantment Book!",
                     Items.GOLD_INGOT,
                     64,
                     BookEnchantmentHelper.createFortune3Book().getItem(),
+                    1));
+
+    public static final RegistryObject<QuestItem> QUEST_WIZARD_THREE = ITEMS.register("quest_wizard_three",
+            () -> new QuestItem(new Item.Properties().tab(ModCreativeModeTab.TEST_TAB).stacksTo(1),
+                    "Retrieve a stack of iron ingots and you will get a Unbreaking III Enchantment Book!",
+                    Items.IRON_INGOT,
+                    64,
+                    BookEnchantmentHelper.createUnbreaking3Book().getItem(),
                     1));
 
     public static final RegistryObject<QuestItem> QUEST_NOBLE_ONE = ITEMS.register("quest_noble_one",

@@ -38,10 +38,20 @@ public class ModEvents {
         } else if (event.getType() == ModVillagers.WIZARD.get()) {
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
             ItemStack stack_quest_1 = new ItemStack(ModItems.QUEST_WIZARD_ONE.get(), 1);
+            ItemStack stack_quest_2 = new ItemStack(ModItems.QUEST_WIZARD_TWO.get(), 1);
+            ItemStack stack_quest_3 = new ItemStack(ModItems.QUEST_WIZARD_THREE.get(), 1);
 
             trades.get(1).add((trader, rand) -> new MerchantOffer(
                     new ItemStack(Items.EMERALD, 5),
                     stack_quest_1,10,8,0.02F));
+
+            trades.get(1).add((trader, rand) -> new MerchantOffer(
+                    new ItemStack(Items.EMERALD, 5),
+                    stack_quest_2,10,8,0.02F));
+
+            trades.get(1).add((trader, rand) -> new MerchantOffer(
+                    new ItemStack(Items.EMERALD, 5),
+                    stack_quest_3,10,8,0.02F));
         } else if (event.getType() == ModVillagers.GUARDIAN.get()) {
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
             ItemStack stack_quest_1 = new ItemStack(ModItems.QUEST_GUARDIAN_ONE.get(), 1);
