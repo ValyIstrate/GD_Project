@@ -1,5 +1,14 @@
 {
-  "item.villagerquests.quest": "Quest",
+  "item.villagerquests.quest_wizard_one": "Wizard Quest #1",
+  "item.villagerquests.quest_noble_one": "Noble Quest #1",
+  "item.villagerquests.quest_noble_two": "Noble Quest #2",
+  "item.villagerquests.quest_noble_three": "Noble Quest #3",
+  "item.villagerquests.quest_guardian_one": "Guardian Quest #1",
+  "item.villagerquests.quest_guardian_two": "Guardian Quest #2",
+  "item.villagerquests.quest_guardian_three": "Guardian Quest #3",
+  "item.villagerquests.quest_protector_one": "Protector Quest #1",
+  "item.villagerquests.quest_protector_two": "Protector Quest #2",
+  "item.villagerquests.quest_protector_three": "Protector Quest #3",
 
   "block.villagerquests.quest_handler_block": "QuestStone",
   "block.villagerquests.noble_guild_stone": "Nobles' Guild Stone",
