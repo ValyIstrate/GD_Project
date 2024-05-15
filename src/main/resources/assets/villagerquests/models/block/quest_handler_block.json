@@ -1,12 +1,26 @@
 {
-  "parent": "block/cube_all",
-  "textures": {
-    "down": "villagerquests:block/quest_handler_block_default",
-    "up": "villagerquests:block/quest_handler_block_up",
-    "north": "villagerquests:block/quest_handler_block_default",
-    "east": "villagerquests:block/quest_handler_block_default",
-    "south": "villagerquests:block/quest_handler_block_default",
-    "west": "villagerquests:block/quest_handler_block_default",
-    "particle": "villagerquests:block/quest_handler_block_default"
-  }
+	"credit": "Made with Blockbench",
+	"textures": {
+		"0": "villagerquests:block/quest_handler_design",
+		"particle": "villagerquests:block/quest_handler_design"
+	},
+	"elements": [
+		{
+			"from": [0, 0, 0],
+			"to": [16, 17, 16],
+			"faces": {
+				"north": {"uv": [0, 0, 16, 16], "texture": "#0"},
+				"east": {"uv": [0, 0, 16, 16], "texture": "#0"},
+				"south": {"uv": [0, 0, 16, 16], "texture": "#0"},
+				"west": {"uv": [0, 0, 16, 16], "texture": "#0"},
+				"up": {"uv": [0, 0, 16, 16], "texture": "#0"},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#0"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [137, 0, -116]
+		}
+	}
 }
