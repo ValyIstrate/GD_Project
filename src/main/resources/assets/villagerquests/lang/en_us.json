@@ -8,5 +8,8 @@
   "block.villagerquests.protector_guild_stone": "Protectors' Guild Stone",
 
   "itemGroup.queststab": "Villager's Quests",
-  "entity.minecraft.villager.villagerquests.guardian": "Guardian"
+  "entity.minecraft.villager.villagerquests.noble": "Noble",
+  "entity.minecraft.villager.villagerquests.wizard": "Wizard",
+  "entity.minecraft.villager.villagerquests.guardian": "Guardian",
+  "entity.minecraft.villager.villagerquests.protector": "Protector"
 }

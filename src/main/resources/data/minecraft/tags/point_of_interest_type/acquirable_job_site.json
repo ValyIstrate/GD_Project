@@ -1,5 +1,8 @@
 {
   "values": [
-    "villagerquests:guardian_guild_stone"
+    "villagerquests:noble_guild_stone",
+    "villagerquests:wizard_guild_stone",
+    "villagerquests:guardian_guild_stone",
+    "villagerquests:protector_guild_stone"
   ]
 }
