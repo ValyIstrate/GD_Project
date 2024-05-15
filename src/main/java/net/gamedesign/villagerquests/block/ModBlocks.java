@@ -25,11 +25,15 @@ public class ModBlocks {
     public static final RegistryObject<Block> QUEST_HANDLER = registerBlock("quest_handler_block",
             () -> new QuestStoneBlock(BlockBehaviour.Properties.of(Material.STONE).strength(1f)), ModCreativeModeTab.TEST_TAB);
 
-    public static final RegistryObject<Block> GUARDIAN_STONE = registerBlock("guardian_guild_stone",
+    public static final RegistryObject<Block> NOBLE_STONE = registerBlock("noble_guild_stone",
             () -> new GuildStoneBlock(BlockBehaviour.Properties.of(Material.METAL).
                     strength(6f).requiresCorrectToolForDrops().noOcclusion()), ModCreativeModeTab.TEST_TAB);
 
-    public static final RegistryObject<Block> NOBLE_STONE = registerBlock("noble_guild_stone",
+    public static final RegistryObject<Block> WIZARD_STONE = registerBlock("wizard_guild_stone",
+            () -> new GuildStoneBlock(BlockBehaviour.Properties.of(Material.METAL).
+                    strength(6f).requiresCorrectToolForDrops().noOcclusion()), ModCreativeModeTab.TEST_TAB);
+
+    public static final RegistryObject<Block> GUARDIAN_STONE = registerBlock("guardian_guild_stone",
             () -> new GuildStoneBlock(BlockBehaviour.Properties.of(Material.METAL).
                     strength(6f).requiresCorrectToolForDrops().noOcclusion()), ModCreativeModeTab.TEST_TAB);
 
