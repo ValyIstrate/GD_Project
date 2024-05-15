@@ -2,7 +2,8 @@
   "item.villagerquests.quest": "Quest",
 
   "block.villagerquests.quest_handler_block": "QuestStone",
-  "block.villagerquests.guardian_guild_stone": "Guardins' Guild Stone",
+  "block.villagerquests.guardian_guild_stone": "Guardians' Guild Stone",
+  "block.villagerquests.noble_guild_stone": "Nobles' Guild Stone",
 
   "itemGroup.queststab": "Villager's Quests",
   "entity.minecraft.villager.villagerquests.guardian": "Guardian"

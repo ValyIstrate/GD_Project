@@ -29,6 +29,10 @@ public class ModBlocks {
             () -> new GuildStoneBlock(BlockBehaviour.Properties.of(Material.METAL).
                     strength(6f).requiresCorrectToolForDrops().noOcclusion()), ModCreativeModeTab.TEST_TAB);
 
+    public static final RegistryObject<Block> NOBLE_STONE = registerBlock("noble_guild_stone",
+            () -> new GuildStoneBlock(BlockBehaviour.Properties.of(Material.METAL).
+                    strength(6f).requiresCorrectToolForDrops().noOcclusion()), ModCreativeModeTab.TEST_TAB);
+
     public static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn, tab);

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "$@$",
+    "$ $"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:obsidian"
+    },
+    "@": {
+      "item": "minecraft:gold_ingot"
+    },
+    "$": {
+      "item": "minecraft:end_rod"
+    }
+  },
+  "result": {
+    "item": "villagerquests:noble_guild_stone"
+  }
+}
