@@ -2,18 +2,21 @@
   "type": "minecraft:crafting_shaped",
   "pattern": [
     "###",
-    "#@#",
-    "###"
+    "$@$",
+    "$ $"
   ],
   "key": {
     "#": {
       "item": "minecraft:obsidian"
     },
     "@": {
-      "item": "minecraft:nether_star"
+      "item": "minecraft:netherite_ingot"
+    },
+    "$": {
+      "item": "minecraft:end_rod"
     }
   },
   "result": {
-    "item": "villagerquests:quest_handler_block"
+    "item": "villagerquests:protector_guild_stone"
   }
 }

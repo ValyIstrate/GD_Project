@@ -2,8 +2,8 @@
 	"credit": "Made with Blockbench",
 	"textures": {
 		"0": "villagerquests:block/leg_color",
-		"1": "villagerquests:block/guardian_side_color",
-		"2": "villagerquests:block/guardian_top_color",
+		"1": "villagerquests:block/noble_side_color",
+		"2": "villagerquests:block/noble_top_color",
 		"particle": "villagerquests:block/leg_color"
 	},
 	"elements": [

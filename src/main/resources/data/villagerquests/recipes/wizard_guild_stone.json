@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "$@$",
+    "$%$"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:obsidian"
+    },
+    "@": {
+      "item": "minecraft:redstone"
+    },
+    "$": {
+      "item": "minecraft:end_rod"
+    },
+    "%": {
+      "item": "minecraft:lapis_lazuli"
+    }
+  },
+  "result": {
+    "item": "villagerquests:wizard_guild_stone"
+  }
+}
