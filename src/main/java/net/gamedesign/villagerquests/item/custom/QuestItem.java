@@ -19,19 +19,17 @@ public class QuestItem extends Item {
     private final String recipe;
     private final Item requiredItem;
     private final int requiredQuantity;
-    private final Item reward;
-    private final int rewardQuantity;
+    private final ItemStack reward;
 
     public QuestItem(Properties properties, String recipe,
                      Item requiredItem, int requiredQuantity,
-                     Item reward, int rewardQuantity) {
+                     ItemStack reward) {
         super(properties);
 
         this.recipe = recipe;
         this.requiredItem = requiredItem;
         this.requiredQuantity = requiredQuantity;
         this.reward = reward;
-        this.rewardQuantity = rewardQuantity;
     }
 
     @Override
@@ -62,12 +60,8 @@ public class QuestItem extends Item {
         return requiredQuantity;
     }
 
-    public Item getReward() {
-        return reward;
-    }
-
-    public int getRewardQuantity() {
-        return rewardQuantity;
+    public ItemStack getReward() {
+        return reward.copy();
     }
 
     @Override

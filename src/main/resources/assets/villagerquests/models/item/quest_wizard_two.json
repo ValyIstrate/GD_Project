@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "villagerquests:item/quest"
+    "layer0": "villagerquests:item/quest_wizard_two"
   }
 }

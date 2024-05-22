@@ -8,7 +8,7 @@ public class ModCreativeModeTab {
     public static final CreativeModeTab TEST_TAB = new CreativeModeTab("queststab") {
         @Override
         public ItemStack makeIcon() {
-            return new ItemStack(ModItems.QUEST_TEST_1.get());
+            return new ItemStack(ModItems.QUEST_WIZARD_ONE.get());
         }
     };
 }
