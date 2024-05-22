@@ -153,8 +153,7 @@ public class QuestCompletedBlockEntity extends BlockEntity implements MenuProvid
 
             pEntity.itemHandler.extractItem(0, 1, false);
             pEntity.itemHandler.extractItem(1, questItem.getRequiredQuantity(), false);
-            pEntity.itemHandler.setStackInSlot(2, new ItemStack(questItem.getReward(),
-                    questItem.getRewardQuantity()));
+            pEntity.itemHandler.setStackInSlot(2, questItem.getReward());
 
             pEntity.resetProgress();
         }
@@ -175,8 +174,7 @@ public class QuestCompletedBlockEntity extends BlockEntity implements MenuProvid
                 entity.itemHandler.getStackInSlot(1).getCount() == questItem.getRequiredQuantity();
 
         return hasQuestItems && canInsertAmountIntoOutputSlot(inventory) &&
-                canInsertItemIntoOutputSlot(inventory, new ItemStack(questItem.getReward(),
-                        questItem.getRewardQuantity()));
+                canInsertItemIntoOutputSlot(inventory, questItem.getReward());
     }
 
     private static boolean canInsertItemIntoOutputSlot(SimpleContainer inventory, ItemStack itemStack) {
